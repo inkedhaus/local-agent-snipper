@@ -1,0 +1,65 @@
+app:
+  name: "Local Sniper Agent"
+  version: "0.1.0"
+  environment: "development"
+  log_level: "INFO"
+
+database:
+  host: "db"
+  port: 5432
+  name: "sniper_agent"
+  user: "postgres"
+  password: "${DB_PASSWORD}"
+
+redis:
+  host: "redis"
+  port: 6379
+  db: 0
+
+location:
+  zip_code: "60601"
+  radius_miles: 50
+
+thresholds:
+  min_discount_percent: 20
+  min_margin_percent: 15
+  min_demand_score: 0.7
+  min_composite_score: 0.75
+
+scraping:
+  platforms:
+    - facebook
+    - craigslist
+    - offerup
+  rate_limits:
+    facebook: 10
+    craigslist: 20
+    offerup: 15
+  user_agents_rotation: true
+  proxy_enabled: false
+  max_retries: 3
+
+trends:
+  google_trends_enabled: true
+  update_frequency_hours: 6
+  momentum_threshold: 0.05
+
+alerts:
+  email:
+    enabled: true
+    recipients: ["user@example.com"]
+  sms:
+    enabled: false
+    phone_numbers: []
+  slack:
+    enabled: false
+    webhook_url: ""
+  webhook:
+    enabled: false
+    url: ""
+
+autopurchase:
+  enabled: false
+  max_daily_spend: 500.00
+  max_price_per_item: 100.00
+  require_manual_approval: true

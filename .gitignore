@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# Environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+.python-version
+
+# Tooling caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+.cache/
+coverage.xml
+.coverage
+.coverage.*
+htmlcov/
+
+# Editors/OS
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Docker
+.docker/
+docker-data/
+
+# Node (in case of mixed projects)
+node_modules/
+
+# Misc
+.ipynb_checkpoints/
+.sentry-native/
